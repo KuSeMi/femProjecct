@@ -15,7 +15,6 @@ func setupTestDB(t *testing.T) *sql.DB {
 		t.Fatalf("opening test db: %v", err)
 	}
 
-	// run the migratoins for our test db
 	err = Migrate(db, "../../migrations/")
 	if err != nil {
 		t.Fatalf("migrating test db error: %v", err)
@@ -43,7 +42,7 @@ func TestCreateWorkout(t *testing.T) {
 		{
 			name: "valid workout",
 			workout: &Workout{
-				Title:           "push day",
+				Title:           "Push day",
 				Description:     "upper body day",
 				DurationMinutes: 60,
 				CaloriesBurned:  200,
@@ -63,7 +62,7 @@ func TestCreateWorkout(t *testing.T) {
 		{
 			name: "workout with invalid entries",
 			workout: &Workout{
-				Title:           "full body",
+				Title:           "Full body",
 				Description:     "complete workout",
 				DurationMinutes: 90,
 				CaloriesBurned:  500,

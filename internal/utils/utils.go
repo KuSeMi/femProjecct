@@ -9,9 +9,9 @@ import (
 	"github.com/go-faster/errors"
 )
 
-type Enevelope map[string]interface{}
+type Envelope map[string]interface{}
 
-func WriteJSON(w http.ResponseWriter, status int, data Enevelope) error {
+func WriteJSON(w http.ResponseWriter, status int, data Envelope) error {
 	js, err := json.MarshalIndent(data, "", "  ")
 	if err != nil {
 		return err
