@@ -10,6 +10,7 @@
 - [goose](https://github.com/pressly/goose)
 - [pgx](https://github.com/jackc/pgx)
 - [chi](https://github.com/go-chi/chi)
+- [testify](https://github.com/stretchr/testify)
 
 ## how to run
 `docker  compose up --build`
